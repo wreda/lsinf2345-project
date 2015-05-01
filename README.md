@@ -14,7 +14,7 @@ While these tools are simple enough to use if you just follow the guide, there a
 
 * Option A: Download a ready-made VM that's already configured with Erlang+Riak via this [link](https://drive.google.com/file/d/0B2DYZ0rziCtjUmdkYnFBcWgxMTg)
   * Default user:pass --> vagrant:vagrant
-* Option B: Setup Riak yourself (reference: [installation guide](http://docs.basho.com/riak/latest/ops/building/installing/))
+* Option B: Setup Riak yourself (reference: [installation guide](http://docs.basho.com/riak/latest/ops/building/installing/) )
 
 ##Using Riak
 
