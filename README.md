@@ -4,7 +4,7 @@
 In this project, you will be utilizing [Riak](http://docs.basho.com/riak/latest/) - a distributed key-value store - in combination with [Erlang](http://www.erlang.org/doc.html) in order to implement your distributed chatting application - StartApp. This repository comprises reference material/code to enable you to setup your environment.
 
 ##Riak
-Riak is a distributed database designed to deliver maximum data availability by distributing data across multiple servers. Your application should leverage Riak in order to implement the required functionality. To get familiarized with Riak and how to use it to create nodes and setup clusters, you can reference the [official docs]((http://docs.basho.com/riak/latest/).
+Riak is a distributed database designed to deliver maximum data availability by distributing data across multiple servers. Your application should leverage Riak in order to implement the required functionality. To get familiarized with Riak and how to use it to create nodes and setup clusters, you can reference the [official docs](http://docs.basho.com/riak/latest/).
 
 ##Setting up your Environment
 ###Vagrant & Puppet
