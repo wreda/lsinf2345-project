@@ -30,13 +30,15 @@ exec { "erlang-install":
 
 exec { "riak-binary-download":
     command => "wget -O riak-2.1.0.zip https://www.dropbox.com/s/vgkni0wehvdm1vn/riak-2.1.0.zip?dl=1 && unzip riak-2.1.0.zip -d riak-2.1.0",
-    cwd => '/home/vagrant/Downloads'
+    cwd => '/home/vagrant/Downloads',
+    #notify => Exec["riak-multi-node"],
     #refreshonly => true,
 }
 
 exec { "riak-multi-node":
 	command => "git clone https://github.com/ksauzz/riak-multi-node && cd riak-multi-node && scp -r /home/vagrant/Downloads/riak-2.1.0/riak riak-2.1.0",
-    require => [Exec["riak-binary-download"],Package["git"]]
+  require => Exec["riak-binary-download"],
+  #refreshonly => true,
 }
 
 exec {"restart-system":
@@ -50,6 +52,7 @@ package { "ubuntu-desktop":
   ensure => present,
   notify => Exec["restart-system"],
   install_options => ['--no-install-recommends'],
+  require => Exec["riak-multi-node"],
 }
 
 package { "ssh":
